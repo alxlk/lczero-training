@@ -28,7 +28,7 @@ import tensorflow as tf
 from tfprocess import TFProcess
 from chunkparser import ChunkParser
 
-SKIP = 32
+SKIP = 0 #32
 
 
 def get_chunks(data_prefix):
