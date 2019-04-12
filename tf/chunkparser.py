@@ -221,7 +221,7 @@ class ChunkParser:
 
         #for i in range(0, len(chunkdata), record_size):
         nr_positions=len(chunkdata)/record_size
-        for i in in iter(random.shuffle(list(range(0,nr_positions)))[0:int(nr_positions/self.sample)])
+        for i in iter(random.shuffle(list(range(0,nr_positions)))[0:int(nr_positions/self.sample)])
             #if self.sample > 1:
                 ## Downsample, using only 1/Nth of the items.
                 #if random.randint(0, self.sample-1) != 0:
