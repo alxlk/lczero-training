@@ -157,6 +157,8 @@ class TFProcess:
         q_ratio = self.cfg['training'].get('q_ratio', 0)
         assert 0 <= q_ratio <= 1
         target = self.q_ * q_ratio + self.z_ * (1 - q_ratio)
+        
+        print(self.z_) #####
 
         # Linear conversion to scalar to compute MSE with, for comparison to old values
         wdl = tf.expand_dims(tf.constant([1.0, 0.0, -1.0]), 1)
