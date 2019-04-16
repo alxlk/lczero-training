@@ -158,7 +158,8 @@ class TFProcess:
         assert 0 <= q_ratio <= 1
         target = self.q_ * q_ratio + self.z_ * (1 - q_ratio)
         
-        print(self.z_) #####
+        #print(self.z_) #####
+        print(target)
 
         # Linear conversion to scalar to compute MSE with, for comparison to old values
         wdl = tf.expand_dims(tf.constant([1.0, 0.0, -1.0]), 1)
